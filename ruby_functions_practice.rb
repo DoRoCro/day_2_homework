@@ -54,7 +54,7 @@ def number_to_full_name(month)
 end
 
 def number_to_short_month_name(month)
-  return number_to_full_name(month).slice(0,3)
+  return number_to_full_name(month).slice(0,3)   # slice(start position, length)
 end
 
 def volume_of_cube(side)
@@ -63,9 +63,10 @@ end
 
 
 def volume_of_sphere(radius)
-  return 4 / 3 * Math::PI * radius**3
+  return 4.0 / 3 * Math::PI * radius**3
 end
 
 def fahrenheit_to_celsius(degF)
   return (degF - 32 ) / 1.8
 end
+
