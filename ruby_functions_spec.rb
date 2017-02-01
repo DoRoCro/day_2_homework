@@ -78,7 +78,9 @@ class Functions_Practice < MiniTest::Test
   #Given the radius of a sphere calculate the volume
   def test_volume_of_sphere()
     radius = 1
-    vol = radius**3 * 4/3 * Math::PI
+    vol = radius**3 * 4/3 * Math::PI        # 4/3 == 1 here, passes test with wrong answer
+                                            # either force to float division or put PI before 
+                                            # division to get implied float calculation
     vol = 4.18879             # better to use fixed result or risk testing two faulty calcs
     assert_equal(vol, volume_of_sphere(radius).round(5))
   end
